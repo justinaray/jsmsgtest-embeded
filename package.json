@@ -18,6 +18,8 @@
   "homepage": "https://github.com/justinaray/jsmsgtest-embeded#readme",
   "private": true,
   "devDependencies": {
+    "del": "^1.2.0",
+    "gulp": "^3.9.0",
     "http-server": "^0.8.0"
   }
 }
