@@ -7,14 +7,36 @@
     </head>
 
     <body>
-        This is the inner message sender component
+        <p>
+            This is the inner message sender component
+        </p>
+
         <br>
-        <button class="send">Send</button>
+        <input type="text" class="txt-msg" value="">
+        <button class="send-txt">Send Msg</button>
+        <button class="show-user">Show User</button>
 
         <script>
-            $('button').on('click', function() {
-                alert('proj is setup!');
-            });
+            if(parent !== window) {
+                $('button.send-txt').on('click', function() {
+                    var txtMsgField = $('input.txt-msg');
+                    var msgToSend = txtMsgField.val();
+                    if(msgToSend) {
+                        parent.postMessage(msgToSend, '*');
+                        txtMsgField.val('');
+                    }
+                });
+
+                $('button.show-user').on('click', function() {
+                    var txtMsgField = $('input.txt-msg');
+                    var msgToSend = txtMsgField.val();
+                    if(msgToSend) {
+                        parent.postMessage({"action": "showProfile", "userGuid": msgToSend}, '*');
+                        txtMsgField.val('');
+                    }
+
+                });
+            }
         </script>
     </body>
 </html>

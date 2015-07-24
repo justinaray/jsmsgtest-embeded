@@ -1,4 +1,5 @@
 var gulp = require('gulp');
+var watch = require('gulp-watch');
 var del = require('del');
 
 // var paths = {
@@ -14,7 +15,11 @@ gulp.task('clean', function(cb) {
 //     return gulp.src('src/main/js')
 // });
 
-gulp.task('build', ['clean'], function(cb) {
+gulp.task('package', ['clean'], function(cb) {
     gulp.src(['bower_components/**']).pipe(gulp.dest('dist/vendor'));
     gulp.src(['public/**']).pipe(gulp.dest('dist'));
 });
+
+// gulp.task('default', function() {
+//     gulp.watch('public/**', ['package']);
+// });
