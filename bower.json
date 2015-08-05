@@ -1,0 +1,22 @@
+{
+  "name": "jsmsgtest-embeded",
+  "version": "0.0.1",
+  "homepage": "https://github.com/justinaray/jsmsgtest-embeded",
+  "authors": [
+    "Justin Ray <justin.a.ray@gmail.com>"
+  ],
+  "description": "A simple example of postMessage (The embeded side)",
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "jquery": "~2.1.4",
+  }
+}
